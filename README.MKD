@@ -1,0 +1,78 @@
+# Projeto: Modelagem de Dados Dimensional para Otimização de Consultas no E-commerce Olist
+
+## Descrição do Projeto
+
+O **Olist** é uma startup brasileira de e-commerce que ajuda vendedores a conectar seus produtos aos principais marketplaces do país. Devido ao crescimento exponencial de usuários e transações, o tempo de consulta aos bancos de dados tem aumentado, impactando diretamente a velocidade de análises e a atualização de métricas em dashboards.
+
+Este projeto tem como objetivo principal criar um modelo de dados dimensional para reduzir o tempo de consultas em pelo menos 50%, utilizando os conceitos de tabelas Fato e Dimensão propostos por Ralph Kimball no livro *The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling*.
+
+---
+
+## Objetivos
+
+1. **Reduzir o tempo de consulta**: Reestruturar o modelo de dados atual para otimizar o desempenho das consultas.
+2. **Implementar o modelo dimensional**: Criar tabelas Fato e Dimensão com base nos dados fornecidos.
+3. **Criar dashboards analíticos**: Desenvolver relatórios para monitorar métricas-chave de desempenho.
+4. **Automatizar atualizações de dados**: Construir um pipeline ETL para manter o modelo atualizado.
+
+---
+
+## Estrutura do Projeto
+
+### Tabelas Criadas
+
+#### Tabelas Fato
+1. **Fato de Pedidos**: Contém informações sobre pedidos, como valor total, data de aprovação e tipo de pagamento.
+2. **Fato de Reviews**: Contém informações relacionadas às avaliações dos pedidos.
+
+#### Tabelas Dimensão
+1. **Dimensão Tempo**: Fornece granularidade temporal para análises (dia, mês, ano).
+2. **Dimensão Localidade**: Contém informações de estado e cidade dos clientes.
+3. **Dimensão Pagamentos**: Detalha os métodos de pagamento.
+4. **Dimensão Produtos**: Contém informações sobre os produtos vendidos.
+5. **Dimensão Cliente**: Contém informações sobre os clientes.
+
+### Dashboards Criados
+
+1. **Número de Pedidos Por Dia**
+2. **Número de Reviews Por Produto**
+3. **Número de Pedidos por Localidade**
+4. **Número de Pedidos por Meio de Pagamento**
+5. **Número de Reviews Por Cliente**
+
+### Pipeline ETL
+
+Um pipeline ETL foi desenvolvido para carregar, transformar e atualizar as tabelas de fato e dimensão periodicamente. Isso garante que o modelo esteja sempre atualizado para análises.
+
+---
+
+## Metodologia
+
+### Etapas Executadas
+
+1. **Análise do modelo de dados atual**: Avaliação do MER fornecido.
+2. **Criação do modelo dimensional**: Implementação do modelo de tabelas Fato e Dimensão.
+3. **Desenvolvimento de Dashboards**: Uso de ferramentas como Power BI para visualização.
+4. **Medição de Desempenho**:
+   - Tempo de consulta no modelo original.
+   - Tempo de consulta no modelo dimensional.
+   - Comparação dos resultados.
+
+### Ferramentas Utilizadas
+
+- **PostgreSQL**: Para Extração do modelo relacional para o dimensional, Transformação dos dados e carregamento dos dados no modelo dimensional.
+
+---
+
+## Resultados Obtidos
+
+1. **Redução de Tempo de Consulta**: O tempo de resposta foi reduzido em mais de 50%.
+3. **Modelo Escalável**: O modelo dimensional permite fácil adaptação para novos requisitos.
+
+---
+
+## Referências
+
+- Ralph Kimball, *The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling*. [Amazon](https://amzn.to/2XshlH3)
+- Dataset Olist: [Kaggle](https://bit.ly/2BgIELw)
+-Projeto de Modelagem de dados para Engenheiro de dados feito por [Meigarom](https://medium.com/comunidadeds/projeto-de-modelagem-de-dados-para-engenharia-de-dados-b11562422676): 

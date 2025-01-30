@@ -61,6 +61,7 @@ Um pipeline ETL foi desenvolvido para carregar, transformar e atualizar as tabel
 ### Ferramentas Utilizadas
 
 - **PostgreSQL**: Para Extração do modelo relacional para o dimensional, Transformação dos dados e carregamento dos dados no modelo dimensional.
+- **Power Bi**: Para criação do dashboard analítico que extrai informações a partir das tabelas fatos de pedido de reviews, presentes no modelo dimensional.
 
 ---
 
